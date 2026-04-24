@@ -18,6 +18,33 @@ from docling.backend.pypdfium2_backend import PyPdfiumDocumentBackend
 # ==========================================
 st.set_page_config(page_title="AI Ekstraktor Dokumentów", page_icon="📄", layout="wide")
 
+# CSS ukrywający domyślne elementy Streamlita i poprawiający wygląd
+ukryj_menu_style = """
+    <style>
+    /* Ukrywa menu w prawym górnym rogu */
+    #MainMenu {visibility: hidden;}
+    
+    /* Ukrywa stopkę Streamlit na dole */
+    footer {visibility: hidden;}
+    
+    /* Ukrywa domyślny, pusty nagłówek na samej górze */
+    header {visibility: hidden;}
+    
+    /* Delikatne zaokrąglenie przycisków głównego wyboru */
+    .stButton>button {
+        border-radius: 6px;
+        font-weight: 600;
+        transition: all 0.2s ease-in-out;
+    }
+    
+    /* Dodanie delikatnego cienia po najechaniu na przycisk */
+    .stButton>button:hover {
+        box-shadow: 0px 4px 10px rgba(0, 75, 135, 0.2);
+    }
+    </style>
+    """
+st.markdown(ukryj_menu_style, unsafe_allow_html=True)
+
 st.title("🤖 AI Ekstraktor Kart Wyrobu")
 st.markdown("Wgraj pliki PDF, a sztuczna inteligencja automatycznie wyciągnie z nich dane i przygotuje plik Excel.")
 
