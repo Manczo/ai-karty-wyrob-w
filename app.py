@@ -27,8 +27,7 @@ ukryj_menu_style = """
     /* Ukrywa stopkę Streamlit na dole */
     footer {visibility: hidden;}
     
-    /* Ukrywa domyślny, pusty nagłówek na samej górze */
-    header {visibility: hidden;}
+    /* USUNĘLIŚMY ukrywanie 'header', aby przycisk rozwijania paska bocznego powrócił! */
     
     /* Delikatne zaokrąglenie przycisków głównego wyboru */
     .stButton>button {
